@@ -7,8 +7,8 @@ add_user_with_key() {
 
     sudo -u $1 mkdir -m 700 /home/$1/.ssh
     sudo -u $1 touch /home/$1/.ssh/authorized_keys
-
-    maybe_add_line_to_file $2 /home/$1/.ssh/authorized_keys
+    
+    maybe_add_line_to_file "${2}" /home/$1/.ssh/authorized_keys
     chmod 600 /home/$1/.ssh/authorized_keys
 }
 
@@ -35,7 +35,7 @@ add_users_from_file() {
         KEY=$(echo "$line" | cut -d= -f2)
 
         echo "Creating user: $USER with key: $KEY"
-        add_user_with_key $USER $KEY
+        add_user_with_key "${USER}" "${KEY}"
     done
 
     echo "Users added."

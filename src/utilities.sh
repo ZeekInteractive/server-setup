@@ -1,10 +1,11 @@
 #!/bin/bash
 
 maybe_add_line_to_file() {
-    grep -qxsF "$1" "$2" || echo "$1" >> "$2"
+    grep -qxsF "${1}" "${2}" || echo "${1}" >> "${2}"
 }
 
 end_message() {
+    echo ""
     echo "Add the following to your ./ssh/config file for easy system access:"
     
     echo ""
