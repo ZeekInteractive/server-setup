@@ -24,12 +24,12 @@ add_user_generate_key() {
 }
 
 add_users_from_file() {
-    if [ ! -f config/users.txt ]; then
+    if [ ! -f ${DIR}/config/users.txt ]; then
         echo "No users.txt file found, aborting setup script."
         exit 1
     fi
 
-    cat config/users.txt | while read line || [[ -n $line ]];
+    cat ${DIR}/config/users.txt | while read line || [[ -n $line ]];
     do
         USER=$(echo "$line" | cut -d= -f1)
         KEY=$(echo "$line" | cut -d= -f2)
