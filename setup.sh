@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR=$(pwd)
-SRC="${pwd}/src"
+SRC="${DIR}/src"
 
 # Load files
 . ${SRC}/utilities.sh
