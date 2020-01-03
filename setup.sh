@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=$(pwd)
+DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 SRC="${DIR}/src"
 
 # Load files
