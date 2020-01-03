@@ -8,7 +8,6 @@ curl -sSLO https://github.com/ZeekInteractive/server-setup/archive/master.zip
 unzip master.zip
 mv server-setup-master server-setup
 
-echo 'Users to create: name="key":'
-read USERS
+vim config/users.txt
 
-echo $USERS > config/users.txt
+./start.sh
