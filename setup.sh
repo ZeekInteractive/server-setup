@@ -1,10 +1,12 @@
 #!/bin/bash
+DIR=$(pwd)
+SRC="${pwd}/src"
 
 # Load files
-. src/utilities.sh
-. src/system.sh
-. src/users.sh
-. src/applications.sh
+. ${SRC}/utilities.sh
+. ${SRC}/system.sh
+. ${SRC}/users.sh
+. ${SRC}/applications.sh
 
 # Set up base system
 setup_base
