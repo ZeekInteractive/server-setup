@@ -41,7 +41,7 @@ install_composer() {
 }
 
 install_node() {
-    curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
     apt-get install -y nodejs
 }
 
